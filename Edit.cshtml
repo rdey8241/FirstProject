@@ -1,0 +1,30 @@
+﻿@model EntityCRUD.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div align="center" style="border:2px solid darkcyan;height:250px; box-shadow:10px 10px 50px 10px"> 
+        <h1><u><i>Edit Page</i></u></h1>
+        <form method="post">
+            <dl>
+                @Html.HiddenFor(model => model.Id)
+
+                <dt>Name</dt>
+                <dd>@Html.EditorFor(model => model.Name)</dd>
+                <dt>Quantity</dt>
+                <dd>@Html.EditorFor(model => model.Quantity)</dd>
+            </dl>
+            <button class="btn btn-success">Save</button>
+        </form>
+    </div>
+</body>
+</html>

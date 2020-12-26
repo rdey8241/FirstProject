@@ -1,0 +1,38 @@
+﻿@model EntityCRUD.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div align="center" style="border:2px solid darkcyan;height:300px; box-shadow:10px 10px 50px 10px"> 
+        <h1><u><em>Create Page</em></u></h1>
+        <form method="post">
+            <div class="form-group">
+                @Html.DisplayNameFor(model => Model.Name)
+                <div>
+                    @Html.EditorFor(model => Model.Name)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => Model.Quantity)
+                <div>
+                    @Html.EditorFor(model => Model.Quantity)
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary">Create</button>
+            </div>
+        </form>
+        <br/>
+        @Html.ActionLink("Back To IndexPage","Index")
+    </div>
+</body>
+</html>

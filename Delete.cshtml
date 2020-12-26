@@ -1,0 +1,29 @@
+﻿@model EntityCRUD.Models.Product
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div align="center" style="border:2px solid darkcyan;height:250px; box-shadow:10px 10px 50px 10px"> 
+        <h1><u><i>Delete Page</i></u></h1>
+        <h3>Are You Sure You want to delete..</h3>
+        <form method="post">
+            <dl>
+                @Html.HiddenFor(model=>model.Id)
+                <dt>@Html.DisplayNameFor(model=>model.Name):</dt>
+                <dd>@Html.DisplayFor(model=>model.Name)</dd>
+            </dl>
+            <button class="btn btn-danger">yes</button>
+            @Html.ActionLink("Cancel","Index")
+        </form>
+    </div>
+</body>
+</html>
